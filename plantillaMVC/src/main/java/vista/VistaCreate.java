@@ -1,7 +1,8 @@
 package vista;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,7 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class VistaCreate extends JFrame {
+//Vital poner el implements ActionListener y darle a implementar metodos si vemos que peta.
+public class VistaCreate extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField tfNombre;
@@ -18,6 +20,8 @@ public class VistaCreate extends JFrame {
 	private JTextField tfDireccion;
 	private JTextField tfDni;
 	private JTextField tfFecha;
+	private JButton btnBack;
+	private JButton btnInsertar;
 
 	/**
 	 * Launch the application.
@@ -91,13 +95,42 @@ public class VistaCreate extends JFrame {
 		tfFecha.setBounds(66, 108, 86, 20);
 		contentPane.add(tfFecha);
 		
-		JButton btnBack = new JButton("Back");
+		btnBack = new JButton("Back");
 		btnBack.setBounds(335, 227, 89, 23);
 		contentPane.add(btnBack);
 		
-		JButton btnInsertar = new JButton("Insertar");
+		btnInsertar = new JButton("Insertar");
 		btnInsertar.setBounds(10, 136, 89, 23);
 		contentPane.add(btnInsertar);
+		
+		limpiar();
+		
+		//Añadimos los listener a los botones. El this hace referencia al listener implementado en la clase.
+		btnBack.addActionListener(this);
+		btnInsertar.addActionListener(this);
+		
 	}
+	
+	//Metodo limpiar. Se ejecutará al cargar la página.
+	private void limpiar() {
+		tfNombre.setText("");
+		tfApellido.setText("");
+		tfDireccion.setText("");
+		tfDni.setText("");
+		tfFecha.setText("");
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		//Con el e.getSource() podemos compararlo con el nombre de la variable.
+		System.out.println(e.getSource());
+		if(e.getSource() == btnInsertar) {
+			System.out.println("el e.getSource() es lo mismo que la variable.");
+		}
+		
+	}
+	
+	
 
 }
