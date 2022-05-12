@@ -15,13 +15,13 @@ import javax.swing.JButton;
 public class VistaCreate extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
-	private JTextField tfNombre;
-	private JTextField tfApellido;
-	private JTextField tfDireccion;
-	private JTextField tfDni;
-	private JTextField tfFecha;
-	private JButton btnBack;
-	private JButton btnInsertar;
+	public JTextField tfNombre = new JTextField();
+	public JTextField tfApellido = new JTextField();
+	public JTextField tfDireccion = new JTextField();
+	public JTextField tfDni = new JTextField();
+	public JTextField tfFecha = new JTextField();
+	public JButton btnBack = new JButton("Back");
+	public JButton btnInsertar = new JButton("Insertar");
 
 	/**
 	 * Launch the application.
@@ -70,36 +70,31 @@ public class VistaCreate extends JFrame implements ActionListener {
 		lblNewLabel_4.setBounds(10, 111, 46, 14);
 		contentPane.add(lblNewLabel_4);
 		
-		tfNombre = new JTextField();
 		tfNombre.setBounds(66, 8, 86, 20);
 		contentPane.add(tfNombre);
 		tfNombre.setColumns(10);
 		
-		tfApellido = new JTextField();
 		tfApellido.setColumns(10);
 		tfApellido.setBounds(66, 33, 86, 20);
 		contentPane.add(tfApellido);
 		
-		tfDireccion = new JTextField();
 		tfDireccion.setColumns(10);
 		tfDireccion.setBounds(66, 58, 86, 20);
 		contentPane.add(tfDireccion);
 		
-		tfDni = new JTextField();
 		tfDni.setColumns(10);
 		tfDni.setBounds(66, 83, 86, 20);
 		contentPane.add(tfDni);
 		
-		tfFecha = new JTextField();
 		tfFecha.setColumns(10);
 		tfFecha.setBounds(66, 108, 86, 20);
 		contentPane.add(tfFecha);
 		
-		btnBack = new JButton("Back");
+		
 		btnBack.setBounds(335, 227, 89, 23);
 		contentPane.add(btnBack);
 		
-		btnInsertar = new JButton("Insertar");
+		
 		btnInsertar.setBounds(10, 136, 89, 23);
 		contentPane.add(btnInsertar);
 		

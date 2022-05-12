@@ -1,19 +1,16 @@
 package vista;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JTextArea;
 import javax.swing.JButton;
 
 public class VistaPrincipal extends JFrame {
 
 	private JPanel contentPane;
-
+	public JButton btnRead = new JButton("Buscar Cliente");
+	public JButton btnCreate = new JButton("Crear Cliente");
 	/**
 	 * Create the frame.
 	 */
@@ -29,11 +26,11 @@ public class VistaPrincipal extends JFrame {
 		lblTitulo.setBounds(10, 11, 90, 14);
 		contentPane.add(lblTitulo);
 		
-		JButton btnRead = new JButton("Buscar Cliente");
+		
 		btnRead.setBounds(254, 75, 115, 23);
 		contentPane.add(btnRead);
 		
-		JButton btnCreate = new JButton("Crear Cliente");
+		
 		btnCreate.setBounds(79, 75, 115, 23);
 		contentPane.add(btnCreate);
 	}

@@ -1,7 +1,7 @@
 package com.Patron_MVC.plantillaMVC.main;
 
-import java.awt.EventQueue;
-
+import controlador.ClienteControlador;
+import vista.VistaCreate;
 import vista.VistaPrincipal;
 
 /**
@@ -11,20 +11,13 @@ import vista.VistaPrincipal;
 public class App 
 {
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VistaPrincipal frame = new VistaPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+
+		VistaPrincipal vistaPrincipal = new VistaPrincipal();
+		VistaCreate vistaCreate = new VistaCreate();
+		
+		ClienteControlador controlador = new ClienteControlador(vistaPrincipal,vistaCreate);
+		controlador.mostrarVistaPrincipal();
 	}
 	
 }
