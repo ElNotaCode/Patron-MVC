@@ -1,6 +1,5 @@
 package vista;
 
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,22 +21,6 @@ public class VistaCreate extends JFrame implements ActionListener {
 	public JTextField tfFecha = new JTextField();
 	public JButton btnBack = new JButton("Back");
 	public JButton btnInsertar = new JButton("Insertar");
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VistaCreate frame = new VistaCreate();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.

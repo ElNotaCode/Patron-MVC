@@ -11,6 +11,7 @@ public class VistaPrincipal extends JFrame {
 	private JPanel contentPane;
 	public JButton btnRead = new JButton("Buscar Cliente");
 	public JButton btnCreate = new JButton("Crear Cliente");
+	public JButton btnDelete = new JButton("Delete Cliente");
 	/**
 	 * Create the frame.
 	 */
@@ -26,12 +27,13 @@ public class VistaPrincipal extends JFrame {
 		lblTitulo.setBounds(10, 11, 90, 14);
 		contentPane.add(lblTitulo);
 		
-		
 		btnRead.setBounds(254, 75, 115, 23);
 		contentPane.add(btnRead);
 		
-		
 		btnCreate.setBounds(79, 75, 115, 23);
 		contentPane.add(btnCreate);
+		
+		btnDelete.setBounds(79, 138, 115, 23);
+		contentPane.add(btnDelete);
 	}
 }

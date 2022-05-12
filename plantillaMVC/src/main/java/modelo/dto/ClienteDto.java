@@ -4,13 +4,11 @@ package modelo.dto;
 
 public class ClienteDto {
 	
-
 	//Esto es un objeto ClienteDto, que recogerá todos los datos,
 	//el Data Transfer Object (DTO) se mandará como parametro al Data Access Object (DAO)
 	//por tanto se crea primero el dto y luego el dao.
 	
-	
-	//Metemos las variables que aparecen en la tabla cliente
+	//Metemos las variables que aparecen en la tabla cliente.
 	private int id;
 	private String nombre;
 	private String apellido;
@@ -18,7 +16,7 @@ public class ClienteDto {
 	private int dni;
 	private String fecha;
 	
-	//Generamos Getters y setters
+	//Generamos Getters y setters.
 	
 	public int getId() {
 		return id;

@@ -9,6 +9,7 @@ import java.sql.SQLException;
 public class ConnectionDB {
 
 		private static String ip = "192.168.1.140";
+		private static String db = "clientes";
 		private static String user = "remote";
 		private static String password = "Reus_2022";
 		private static Connection conexion = null;
@@ -18,7 +19,7 @@ public class ConnectionDB {
 			
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
-				conexion = DriverManager.getConnection("jdbc:mysql://" + ip + ":3306?useTimezone=true&serverTimezone=UTC", user, password);
+				conexion = DriverManager.getConnection("jdbc:mysql://" + ip + ":3306/"+ db +"?useTimezone=true&serverTimezone=UTC", user, password);
 				System.out.println("Conexion establecida.");
 				return conexion;
 			} catch (SQLException |ClassNotFoundException e) {

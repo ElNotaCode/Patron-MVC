@@ -33,7 +33,9 @@ public class ClienteDao {
 				consulta.setString(2, cliente.getApellido());
 				consulta.setString(3, cliente.getDireccion());
 				consulta.setInt(4, cliente.getDni()); //Con setInt metemos el dni, que es entero.
-				consulta.setString(5, cliente.getFecha());
+				consulta.setString(5, cliente.getFecha()); //TODO: Mirar porque falla fecha.
+				
+				consulta.executeUpdate();
 				
 				//Cerramos la consulta.
 				consulta.close();
@@ -57,5 +59,28 @@ public class ClienteDao {
 	//UPDATE
 	
 	//DELETE
+	public void deleteCliente(ClienteDto cliente) {
+		
+		ConnectionDB conexion = new ConnectionDB();
+		
+		try {
+			
+			String sql = "DELETE FROM cliente WHERE id = ? ;";
+			PreparedStatement consulta = conexion.crearConexion().prepareStatement(sql);
+			consulta.setInt(1, cliente.getId());
+			consulta.executeUpdate();
+			
+			consulta.close();
+			conexion.closeConnection();
+			
+			JOptionPane.showMessageDialog(null, "Se ha borrado al cliente.");
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+			JOptionPane.showMessageDialog(null, "ERROR! No se ha borrado al cliente.");
+		}
+		
+	}
 
 }

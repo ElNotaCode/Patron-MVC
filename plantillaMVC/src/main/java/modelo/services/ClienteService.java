@@ -24,4 +24,13 @@ public class ClienteService {
 		
 	}
 	
+	public void validarDelete(ClienteDto clienteDto) {
+		
+		ClienteDao clienteDao;
+		
+		clienteDao = new ClienteDao();
+		clienteDao.deleteCliente(clienteDto);
+		
+	}
+	
 }

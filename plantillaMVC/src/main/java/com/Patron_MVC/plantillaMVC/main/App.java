@@ -2,6 +2,7 @@ package com.Patron_MVC.plantillaMVC.main;
 
 import controlador.ClienteControlador;
 import vista.VistaCreate;
+import vista.VistaDelete;
 import vista.VistaPrincipal;
 
 /**
@@ -15,8 +16,9 @@ public class App
 
 		VistaPrincipal vistaPrincipal = new VistaPrincipal();
 		VistaCreate vistaCreate = new VistaCreate();
+		VistaDelete vistaDelete = new VistaDelete();
 		
-		ClienteControlador controlador = new ClienteControlador(vistaPrincipal,vistaCreate);
+		ClienteControlador controlador = new ClienteControlador(vistaPrincipal,vistaCreate,vistaDelete);
 		controlador.mostrarVistaPrincipal();
 	}
 	
